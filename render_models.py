@@ -1,10 +1,10 @@
-from docmodel import DocModel
+from kodacad.docmodel import DocModel
 import os
 from OCC.Core.AIS import AIS_Shape, AIS_Line, AIS_Circle
 from OCC.Display.SimpleGui import init_display
 
-models_dir_path = "C:/Users/Computer/PycharmProjects/graphStepSimilarity/Datasets/DS_4/Models/"
-images_dir_path = "C:/Users/Computer/PycharmProjects/graphStepSimilarity/images/models_images/"
+models_dir_path = "C:/Users/mande/Desktop/Render_step/models/"
+images_dir_path = "C:/Users/mande/Desktop/Render_step/images/"
 files = []
 for file in os.listdir(models_dir_path):
     if file.endswith((".step", ".stp")):
@@ -41,5 +41,5 @@ for file in files:
 
     image_name = os.path.splitext(file)[0] + ".jpeg"
     display.View.Dump(images_dir_path + image_name)
-    # display.DisplayShape(aisShape)
-    # start_display()
+    display.DisplayShape(aisShape)
+    start_display()

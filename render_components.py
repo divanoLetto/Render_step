@@ -2,6 +2,8 @@ from docmodel import DocModel
 import os
 from OCC.Core.AIS import AIS_Shape, AIS_Line, AIS_Circle
 from OCC.Display.SimpleGui import init_display
+from OCC.STEPControl import STEPControl_Reader
+from OCC.Core.StlAPI import stlapi_Read, StlAPI_Writer
 
 models_dir_path = "C:/Users/Computer/PycharmProjects/graphStepSimilarity/Datasets/DS_4/Models/"
 images_dir_path = "C:/Users/Computer/PycharmProjects/graphStepSimilarity/images/models_images/"
